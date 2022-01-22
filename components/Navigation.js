@@ -1,18 +1,37 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import edLogo from '../public/img/ed-logo-128x128.png';
 
 const Navigation = (props) => {
+
+    const [colorChange, setColorChange] = useState(true);
+
+    const changeNavbarColor = () => {
+        if (window.scrollY >= 80) {
+            setColorChange(true);
+        }
+        else {
+            setColorChange(false);
+        }
+    };
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNavbarColor)
+    }, []);
+
+
     return (
-        <HeaderStyles>
+        <HeaderStyles className={`${colorChange ? "solid" : ""}`}>
             <NavStyles className="container">
                 <LogoStyles href="/">
                     <div className="logo-wrap">
                         <Image src={edLogo} width={40} height={40} />
                     </div>
                 </LogoStyles>
-                <NavItemsStyles className='left'>
+                <NavItemsStyles className={`left ${colorChange ? "solid" : ""}`}>
                     <li><Link href="/features">features</Link></li>
                     <li><Link href="/a-mobile-lms">a mobile lms</Link></li>
                     <li><Link href="/course-library">course library</Link></li>
@@ -22,7 +41,7 @@ const Navigation = (props) => {
                     <li><Link href="/pricing">pricing</Link></li>
                 </NavItemsStyles>
 
-                <NavItemsStyles className="right">
+                <NavItemsStyles className={`right ${colorChange ? "solid" : ""}`}>
                     <li><Link href="/login">login</Link></li>
                     <li><Link href="/signup">sign up free</Link></li>
                 </NavItemsStyles>
@@ -42,6 +61,15 @@ const HeaderStyles = styled.div`
     width: 100%;
     background: transparent;
     z-index: 999;
+    transition: 0.3s ease-in-out;
+
+    &.solid{
+        background-color: #fff;
+        color: #000;
+        -webkit-box-shadow: 0px 5px 23px 6px rgba(0,0,0,0.48); 
+box-shadow: 0px 5px 23px 6px rgba(0,0,0,0.48);
+
+    }
 `;
 
 
@@ -71,7 +99,7 @@ const NavItemsStyles = styled.ul`
             color: #fff;
             text-decoration: none;
             font-weight: 500;
-            transition: 0.5s ease-in-out;
+            transition: 1s ease-in-out;
 
             &:hover{
                         color: black;
@@ -84,6 +112,11 @@ const NavItemsStyles = styled.ul`
             li{
                 margin-right: 0.6rem;
             }
+            &.solid{
+                li>a{
+                    color: #000;
+                }
+            }
         }
 
 
@@ -91,6 +124,12 @@ const NavItemsStyles = styled.ul`
 
             li{
                 margin-left: 0.6rem;
+            }
+
+            &.solid{
+                li>a{
+                    color: #000;
+                }
             }
         }
 `
