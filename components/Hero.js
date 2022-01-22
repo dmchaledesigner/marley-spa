@@ -2,16 +2,17 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 const Hero = (props) => {
+
     return (
-        <HeroStyles>
+        <HeroStyled>
             <Image
-                alt="Mountains"
-                src={props.img}
+                alt="Marley Spoon"
+                src={props.bgImg}
                 layout="fill"
                 objectFit="cover"
                 quality={100}
             />
-        </HeroStyles>
+        </HeroStyled>
     );
 };
 
@@ -19,7 +20,7 @@ export default Hero;
 
 
 
-const HeroStyles = styled.div`
+const HeroStyled = styled.div`
 position: relative;
 padding: 0;
 margin: 0;
