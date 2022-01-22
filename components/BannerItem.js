@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -21,8 +22,8 @@ const BannerItem = (props) => {
 
                         <div className="col-sm-5 content">
                             <h2>{props.title}</h2>
-                            <p>Marley Spoon typically onboards new staff with face-to-face training, complemented by surveys. Since COVID-19, however, more people opted to order fresh ingredients to their doors, which resulted in a tremendous surge in demand.</p>
-                            <p>As an essential business provider, Marley Spoon was able to hire the largest amount of staff in the smallest amount of time on record. Since classroom training was no longer a viable option, Marley Spoon required a solution that could easily onboard and train their hundreds of new team members efficiently and effectively.</p>
+                            {props.para1 ? (<p>{props.para1}</p>) : null}
+                            {props.para2 ? (<p>{props.para2}</p>) : null}
                         </div>
                     </div>
                 </ContentStyles>

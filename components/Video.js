@@ -1,5 +1,7 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
+import { WrapperStyled } from '../styles/resuableStyles';
 
 const Video = (props) => {
     return (
@@ -28,12 +30,11 @@ const Video = (props) => {
 
 
 
-const WrapperStyled = styled.div`
-padding: 5rem 0;
-background-color: #fff;
-text-align: center;
 
-`;
+Video.propTypes = {
+    videoLink: PropTypes.string.isRequired,
+}
+
 
 
 export default Video;
