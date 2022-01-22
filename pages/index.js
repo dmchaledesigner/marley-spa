@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import MetaData from '../components/MetaData';
 import BannerItem from '../components/BannerItem';
+import Video from '../components/Video';
 
 import marleyLogo from '../public/img/logo.png';
 import headerImg from '../public/img/header.jpeg'
@@ -39,6 +40,11 @@ export default function Home(props) {
         title='Onboarding hundreds of new team members during COVID-19'
         bgImg={yellowBg}
         direction="justify-content-end"
+      />
+
+
+      <Video
+        videoLink="https://www.youtube.com/embed/8J0QZndZU1U?modestbranding=1&amp;enablejsapi=1&amp;origin=https://www.edapp.com"
       />
 
 
