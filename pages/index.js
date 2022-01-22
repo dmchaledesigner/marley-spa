@@ -1,19 +1,32 @@
-import { Fragment } from 'react';
+import { Fragment, ref } from 'react';
 
 import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import MetaData from '../components/MetaData';
 import BannerItem from '../components/BannerItem';
 import Video from '../components/Video';
+import QuoteBlock from '../components/QuoteBlock';
+import BannerImage from '../components/BannerImage';
+
 
 import marleyLogo from '../public/img/logo.png';
 import headerImg from '../public/img/header.jpeg'
 import yellowBg from '../public/img/yellowBackground.jpeg';
-import greyBg from '../public/img/greyBackground.jpeg'
+import greyBg from '../public/img/greyBackground.jpeg';
+import pinkBg from '../public/img/pinkBackground.jpeg';
+import phone from '../public/img/ms-lesson.png'
+
+
+import { useInView } from 'react-intersection-observer';
+
 
 
 
 export default function Home(props) {
+
+
+
+
   return (
     <Fragment>
 
@@ -57,6 +70,28 @@ export default function Home(props) {
         para1="EdApp facilitated Marley Spoon’s influx of new starters by reaching and training every new team member on crucial information. Before the implementation of EdApp, this would not have been possible to achieve at scale and in such a short period of time. While representing Marley Spon’s strong brand identity, EdApp enabled the delivery of vital information like food safety and procedures."
         direction="justify-content-start"
       />
+
+
+      <QuoteBlock />
+
+
+
+      <BannerItem
+        title='An enhanced learning experience with EdApp'
+        bgImg={pinkBg}
+        para1="Marley Spoon has a large number of team members, who are divided into various sub-departments, meaning certain courses are targetted to train specific groups. Utilising EdApp’s features like User Groups and Push Notifications has enabled Marley Spoon to easily create and share content with these unique groups. When new content is ready, learners are notified in real-time with a push notification, sent straight to their mobile devices. Marley Spoon also incentivises its team members through EdApp’s built-in prizing feature. It sparks some friendly competition and winners are rewarded with real prizes."
+        direction="justify-content-end"
+      />
+
+
+
+      <BannerImage
+        title="test"
+        para1="For companies like Marley Spoon who are dealing with food, health and safety is always a priority. EdApp microlessons allow learners to complete important lessons anytime, anywhere in small, digestible chunks. What’s more, content can be revisited regularly to ensure processes are completed and, more importantly, understood."
+        para2="Whether employees are on-site at production centres, out delivering product or at the office, dispersed teams can complete their EdApp microlessons in five minutes or so, and revisit when it suits them. Lessons can be created, edited, and deployed to cohorts ensuring that all team members have the most up-to-date content at all times. The best part? All this can be done on learners’ mobile devices."
+      />
+
+
 
 
 

@@ -10,7 +10,7 @@ const Intro = (props) => {
                 <div className="row justify-content-center">
                     <div className="col-md-4">
                         <ImageStyled>
-                            <Image src={props.image} width={props.imgwidth} height={props.imgheight} layout="intrinsic" alt="Marley Spoon" sizes='100vw' />
+                            <Image src={props.image} width={props.imgwidth} height={props.imgheight} layout="responsive" alt="Marley Spoon" />
                         </ImageStyled>
                     </div>
                 </div>
@@ -80,16 +80,6 @@ hr{
 const ImageStyled = styled.div`
     width: 100%;
 
-    /* > div {
-    position: unset !important;
-  }
-
-        .image{
-            object-fit: contain;
-            width: 100% !important;
-            position: relative !important;
-            height: unset !important;
-        } */
 `;
 
 

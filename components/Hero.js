@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -19,11 +19,6 @@ const Hero = (props) => {
 
 export default Hero;
 
-
-
-Hero.propTypes = {
-    bgImg: PropTypes.string.isRequired,
-}
 
 
 const HeroStyled = styled.div`

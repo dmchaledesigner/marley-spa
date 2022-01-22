@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import styled from 'styled-components';
+import { ContentStyles } from '../styles/resuableStyles';
 
 const BannerItem = (props) => {
 
@@ -24,6 +25,12 @@ const BannerItem = (props) => {
                             <h2>{props.title}</h2>
                             {props.para1 ? (<p>{props.para1}</p>) : null}
                             {props.para2 ? (<p>{props.para2}</p>) : null}
+                            {props.blockQuote ? (
+                                <QuoteText>
+                                    <blockquote className="text-lg text-dark">EdApp allows for a more modern learning approach where our learners and our team members can access the materials anytime, anywhere.</blockquote>
+                                    <figcaption className="text-sm text-normal">Aga Strzemeska, Head of People Operations, Marley Spoon</figcaption>
+                                </QuoteText>
+                            ) : null}
                         </div>
                     </div>
                 </ContentStyles>
@@ -54,20 +61,3 @@ z-index: 0;
     }
 `;
 
-
-const ContentStyles = styled.div`
-z-index: 1;
-margin: 3rem 0;
-
-.content{
-    padding: 2.5rem;
-    margin-right: 1rem;
-    text-align: center;
-
-    h2{
-        font-size: 1.75rem;
-        font-weight: 300;
-        margin-bottom: 12px;
-    }
-}
-`

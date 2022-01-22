@@ -6,19 +6,19 @@ import { WrapperStyled } from '../styles/resuableStyles';
 const Video = (props) => {
     return (
         <WrapperStyled>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-md-10">
 
                         <iframe
-                            class="video"
+                            className="video"
                             loading="lazy"
                             type="text/html"
                             width="100%"
                             height="480"
-                            frameborder="0"
+                            frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media;"
-                            allowfullscreen=""
+                            allowFullScreen=""
                             src={props.videoLink}
                             data-lf-yt-playback-inspected-xz1a5d7o03ldp3k2="true"></iframe>
                     </div>
