@@ -9,7 +9,7 @@ import Button from './ui/Button';
 const CtaBlock = () => {
 
     const buttonHandler = (e) => {
-        console.log(e.target.textContent)
+        console.log(e.target.textContent);
     }
 
 

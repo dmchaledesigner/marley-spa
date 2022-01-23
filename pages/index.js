@@ -8,6 +8,9 @@ import Video from '../components/Video';
 import QuoteBlock from '../components/QuoteBlock';
 import BannerImage from '../components/BannerImage';
 import Quote from '../components/Quote';
+import CtaBlock from '../components/CtaBlock';
+import EdAppList from '../components/EdAppList';
+
 
 
 import marleyLogo from '../public/img/logo.png';
@@ -18,7 +21,6 @@ import pinkBg from '../public/img/pinkBackground.jpeg';
 
 
 import { useInView } from 'react-intersection-observer';
-import CtaBlock from '../components/CtaBlock';
 
 
 
@@ -97,7 +99,7 @@ export default function Home(props) {
       <CtaBlock />
 
 
-
+      <EdAppList />
 
 
 
