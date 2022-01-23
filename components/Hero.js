@@ -25,7 +25,7 @@ const HeroStyled = styled.div`
 position: relative;
 padding: 0;
 margin: 0;
-height: 65vh;
+height: 60vh;
 width: 100vw;
 overflow: hidden;
 z-index: 0;

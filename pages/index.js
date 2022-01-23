@@ -7,6 +7,7 @@ import BannerItem from '../components/BannerItem';
 import Video from '../components/Video';
 import QuoteBlock from '../components/QuoteBlock';
 import BannerImage from '../components/BannerImage';
+import Quote from '../components/Quote';
 
 
 import marleyLogo from '../public/img/logo.png';
@@ -14,10 +15,10 @@ import headerImg from '../public/img/header.jpeg'
 import yellowBg from '../public/img/yellowBackground.jpeg';
 import greyBg from '../public/img/greyBackground.jpeg';
 import pinkBg from '../public/img/pinkBackground.jpeg';
-import phone from '../public/img/ms-lesson.png'
 
 
 import { useInView } from 'react-intersection-observer';
+import CtaBlock from '../components/CtaBlock';
 
 
 
@@ -86,10 +87,14 @@ export default function Home(props) {
 
 
       <BannerImage
-        title="test"
-        para1="For companies like Marley Spoon who are dealing with food, health and safety is always a priority. EdApp microlessons allow learners to complete important lessons anytime, anywhere in small, digestible chunks. What’s more, content can be revisited regularly to ensure processes are completed and, more importantly, understood."
-        para2="Whether employees are on-site at production centres, out delivering product or at the office, dispersed teams can complete their EdApp microlessons in five minutes or so, and revisit when it suits them. Lessons can be created, edited, and deployed to cohorts ensuring that all team members have the most up-to-date content at all times. The best part? All this can be done on learners’ mobile devices."
+        direction="justify-content-center"
       />
+
+
+      <Quote />
+
+
+      <CtaBlock />
 
 
 

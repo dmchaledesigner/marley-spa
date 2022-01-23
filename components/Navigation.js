@@ -66,8 +66,9 @@ const HeaderStyles = styled.div`
     &.solid{
         background-color: #fff;
         color: #000;
+        padding-top: 25px;
         -webkit-box-shadow: 0px 5px 23px 6px rgba(0,0,0,0.48); 
-box-shadow: 0px 5px 23px 6px rgba(0,0,0,0.48);
+        box-shadow: 0px 5px 23px 6px rgba(0,0,0,0.48);
 
     }
 `;
