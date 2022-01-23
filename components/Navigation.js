@@ -3,10 +3,12 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import edLogo from '../public/img/ed-logo-128x128.png';
+import edLogoSwap from '../public/img/ed-logo-swap.png';
 
 const Navigation = (props) => {
 
     const [colorChange, setColorChange] = useState(true);
+
 
     const changeNavbarColor = () => {
         if (window.scrollY >= 80) {
@@ -18,9 +20,12 @@ const Navigation = (props) => {
     };
 
 
+
+
     useEffect(() => {
-        window.addEventListener('scroll', changeNavbarColor)
+        window.addEventListener('scroll', changeNavbarColor);
     }, []);
+
 
 
     return (
@@ -28,7 +33,10 @@ const Navigation = (props) => {
             <NavStyles className="container">
                 <LogoStyles href="/">
                     <div className="logo-wrap">
-                        <Image src={edLogo} width={40} height={40} />
+                        {
+                            colorChange ? (<Image src={edLogoSwap} width={40} height={40} />) : (<Image src={edLogo} width={40} height={40} />)
+                        }
+
                     </div>
                 </LogoStyles>
                 <NavItemsStyles className={`left ${colorChange ? "solid" : ""}`}>
