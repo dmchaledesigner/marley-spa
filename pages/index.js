@@ -102,6 +102,9 @@ export default function Home(props) {
       <EdAppList />
 
 
+      <CtaBlock />
+
+
 
     </Fragment>
   )

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styled from 'styled-components';
 import appStoreBadge from '../public/img/app-store-badge.png';
 import googleStoreBadge from '../public/img/google-play-badge-2x.png';
 import edAppBadge from '../public/img/ed-web-badge-2x.png';
@@ -6,14 +7,15 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="block-v-sm __active" id="footer">
-            <div className="container text-sm-center text-light __active">
-                <div className="row block-v-md __active">
+        <FooterStyled>
+            <div className="container">
+                <div className="row justify-content-center">
                     <div className="col-md-6 col-md-offset-3">
-                        <hr /></div></div><div className="row block-v-md">
+                        <hr /></div></div>
 
 
-                    <div className="col-footer col-sm-6 col-md-2 text-sm-center block-v-sm col-md-offset-1">
+                <div className="row justify-content-center">
+                    <div className="col-footer col-sm-6 col-md-2">
                         <h4 className="text-bold">Features</h4>
                         <ul className="ul-bare">
                             <li className="text-muted"><Link href="/lms-features/" rel="">LMS Features</Link></li>
@@ -75,20 +77,22 @@ const Footer = () => {
 
                 </div>
 
-                <div className="row block-v-sm">
-                    <div className="col-sm-12 text-center">
-                        <a className="download-link" href="https://apple.co/1RNEsSk" target="_blank" rel="noopener">
-                            <Image src={appStoreBadge} width={156} height={48} />
-                        </a>
+                <div className="row justify-content-center">
+                    <div className="col-sm-8">
+                        <AppStoreStyled>
+                            <a className="download-link" href="https://apple.co/1RNEsSk" target="_blank" rel="noopener">
+                                <Image src={appStoreBadge} width={156} height={48} />
+                            </a>
 
-                        <a className="download-link" href="https://bit.ly/1ZvyCv1" target="_blank" rel="noopener">
-                            <Image src={googleStoreBadge} width={172} height={48} />
-                        </a>
+                            <a className="download-link" href="https://bit.ly/1ZvyCv1" target="_blank" rel="noopener">
+                                <Image src={googleStoreBadge} width={172} height={48} />
+                            </a>
 
 
-                        <a className="download-link" href="https://web.edapp.com" title="Welcome to EdApp" target="_blank">
-                            <Image src={edAppBadge} width={176} height={48} />
-                        </a>
+                            <a className="download-link" href="https://web.edapp.com" title="Welcome to EdApp" target="_blank">
+                                <Image src={edAppBadge} width={176} height={48} />
+                            </a>
+                        </AppStoreStyled>
                     </div>
                 </div>
 
@@ -96,8 +100,62 @@ const Footer = () => {
 
 
 
-        </footer>
+        </FooterStyled>
     );
 }
+
+
+const FooterStyled = styled.div`
+
+        h4{
+            color: #1f2e3c;
+            font-weight: 500;
+            text-align: left;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            
+        }
+
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+                margin-bottom: 0.8rem;
+                color: #848f9d;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                a{
+                    color: #848f9d;
+                }
+            }
+        }
+
+        hr{
+            margin-bottom: 7rem;
+            margin-top: 5rem;
+            background: rgba(0,47,91,.7);
+        }
+`;
+
+
+const AppStoreStyled = styled.div`
+padding: 2rem 0;
+background-color: #fff;
+display: grid;
+place-items: center;
+place-content: center;
+grid-template-columns: repeat(3, 1fr);
+
+`
+
+
 
 export default Footer;
